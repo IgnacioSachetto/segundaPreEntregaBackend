@@ -1,0 +1,44 @@
+
+<div>
+  <script type="module" src="/js/products.js"></script>
+
+  <h1>Products List</h1>
+  <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="dinamic-product-list">
+            {{#each p}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.price}}</td>
+                <td>
+                <button class="btn-add" type="button" value="{{this.id}}">Add Product</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <hr />
+    <hr />
+
+    {{#if hasPrevPage}}
+      <a href="{{prevLink}}"><button type="button">Back</button></a>
+    {{/if}}
+    {{#if hasNextPage}}
+      <a href="{{nextLink}}"><button type="button">Next</button></a>
+    {{/if}}
+    {{page}} -
+
+    {{nextPage}}
+  </div>
+</div>
+
+
