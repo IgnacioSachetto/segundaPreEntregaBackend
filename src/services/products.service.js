@@ -3,21 +3,21 @@ import { ProductsModel } from '../DAO/models/products.model.js';
 class ProductService {
   validatePostProduct(title, description, code, price, status, stock, category, thumbnails) {
     if (!title || !description || !code || !price || !status || !stock || !category || !thumbnails) {
-      console.log('validation error: please complete firstName, lastname and email.');
+      console.log('validation error: please complete title,description,code,price,status,category,thumbnails');
       throw 'VALDIATION ERROR';
     }
   }
 
   validatePutProduct(id, title, description, code, price, status, stock, category, thumbnails) {
     if (!id || !title || !description || !code || !price || !status || !stock || !category || !thumbnails) {
-      console.log('validation error: please complete firstName, lastname and email.');
+      console.log('validation error: please complete title,description,code,price,status,category,thumbnails');
       throw 'VALDIATION ERROR';
     }
   }
 
   validateId(id) {
     if (!id) {
-      console.log('validation error: please complete firstName, lastname and email.');
+      console.log('validation error: please complete id.');
       throw 'VALDIATION ERROR';
     }
   }
